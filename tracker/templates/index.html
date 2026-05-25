@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Registro de Juegos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">🎮 GameTracker</div>
+        <ul class="nav-links">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Biblioteca</a></li>
+            <li><a href="#">Ajustes</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- Panel Lateral -->
+        <aside class="sidebar">
+            <h3>Mi Perfil</h3>
+            <div class="stats">
+                <p>Completados: <span id="completed-count">0</span></p>
+                <p>En curso: <span id="playing-count">0</span></p>
+            </div>
+            <hr>
+            <button id="btn-add-game" class="btn-primary">Añadir Juego</button>
+        </aside>
+
+        <!-- Contenido Principal -->
+        <main class="content">
+            <section id="add-game-section" class="hidden">
+                <h2>Registrar Nuevo Juego</h2>
+                <form id="game-form">
+                    <input type="text" id="game-title" placeholder="Nombre del juego" required>
+                    <input type="text" id="game-progress" placeholder="Avance (ej: 45% o Nivel 10)" required>
+                    <button type="submit">Guardar</button>
+                </form>
+            </section>
+
+            <section id="recent-games">
+                <h2>Jugados Recientemente</h2>
+                <div id="games-container" class="grid-container">
+                    <!-- Los juegos aparecerán aquí -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
